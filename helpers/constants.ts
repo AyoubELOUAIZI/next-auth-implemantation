@@ -6,6 +6,7 @@ export const users = [
     name: "ayoub elouaizi",
     email: "ayoub@example.com",
     password: "000000",
+    image:"the link to the image"
   },
   {
     id: 2,

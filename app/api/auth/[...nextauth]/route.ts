@@ -3,7 +3,7 @@ import NextAuth, { NextAuthOptions } from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
 // import GithubProvider from "next-auth/providers/github"; //we are not using github provider in this project.
 
-const authOptions: NextAuthOptions = {
+export const authOptions: NextAuthOptions = {
   // Configure one or more authentication providers
   providers: [
     CredentialsProvider({
@@ -45,6 +45,7 @@ const authOptions: NextAuthOptions = {
       },
     }),
   ],
+  secret:process.env.NEXTAUTH_SECRET,
 };
 
 const handler = NextAuth(authOptions);
